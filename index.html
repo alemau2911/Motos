@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title></title>
+        <meta name="apple-mobile-web-app-title" content="MOTOS">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="manifest" href="/manifest.json" >
+        <meta name="theme-color" content="#FE0808">
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <script src="js/feather.min.js"></script>
+        <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="images/icons/icon-167x167.png">
+        <link href="images/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        <link href="images/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    </head>
+
+    <body>
+
+        <div id="ingreso">
+            <span id="Titulo">Comunidad de motos</span>
+            <br>
+            <p>Correo</p> 
+            <input type="email" id="correo" />
+            <br>
+            <p>Contraseña</p>
+            <input type="password" id="contrasena" />
+            <br>
+            <button id="ingresar" class="boton">Iniciar</button>
+            <br>
+            <br>
+            <button id="btnRegistrar"class="boton">Unete</button>
+        </div>
+       
+        <div id="registro">
+            <p> Correo</p>
+            <input type="email" id="correoR">
+            <br>
+            <p>Nombre</p> 
+            <input type="text" id="nombreR">
+            <br>
+            <p>Contraseña</p>
+            <input type="password" id="contrasenaR">
+            <br>
+            <p>   Confirmar contraseña</p>
+            <input type="password" id="confirmacionR">
+            <br>
+            <p>  Fecha de nacimiento</p>
+            <input type="date" id="fechaR">
+            <br>
+            <button id="btnRegistro" class="boton">Registrar</button>
+        </div>
+
+        <div class="principal" id="principal">
+            <div id="menu" ><span id="btnMenu" onclick="abrirBarra()"><i data-feather="align-justify"></i></span>
+            </div>
+            <h1 class="titulo">Comunidad de motos</h1>
+            <h2 id="bienvenida">Bienvenido <span id="nombreP"></span> </h2>
+
+            <div class="redactar" id="redactar">
+                Para <br>
+                <input type="text" id="correoM"/>
+                <br> Mensaje <br>
+                <textarea id="mensajeM"></textarea>
+                <br>
+                <button id="enMensa" class="boton">Enviar</button>
+            </div>
+
+            <div id="mensajes"></div>
+
+            <div  id="camara">
+                <div class="container-photo">
+                    <img id="photo" class="photo">
+                </div>
+                <input type="file" accept="image/*" capture="camera" id="camera" class="inputget"/>
+                <button id="open" class="boton">Foto</button>&nbsp;&nbsp;
+                <button id="mapa" class="boton">Mapa</button>
+                <input type="text" id="lugar" >
+            </div>
+
+        </div>
+
+        <div id="barraMenu" class="menu">
+            <a href="javascript:void(0)" class="botonCerrar" onclick="cerrarBarra()">&times;</a>
+            <a href="javascript:void(0)" class="opciones" onclick="mensajes()"><i data-feather="mail"></i>&nbsp; Mensajes</a>
+            <a href="javascript:void(0)" onclick="tomarFoto()" class="opciones"><i data-feather="camera"></i>&nbsp; Fotos</a>
+            <a href="javascript:void(0)" onclick="cerrarSesion()" class="opciones"><i data-feather="log-out"></i>&nbsp; Cerrar Sesion</a>
+        </div>
+
+        <script src="js/app.js"></script>
+
+        <script>
+            feather.replace()
+        </script>
+
+    </body>
+</html>
