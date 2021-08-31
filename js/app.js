@@ -19,9 +19,9 @@ window.onload = function()
     redactar=document.getElementById("redactar");
     photo = document.getElementById("photo");
     camara = document.getElementById("camara");
-    localStorage.setItem("login", 1);
-    localStorage.setItem("nombre", "Mauricio");
-    localStorage.setItem("correo", "mau@gmail.com");
+    // localStorage.setItem("login", 1);
+    // localStorage.setItem("nombre", "Mauricio");
+    // localStorage.setItem("correo", "mau@gmail.com");
 
     if(localStorage.getItem("login") !=="1"){
         ingreso.style.display = "block";
